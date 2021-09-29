@@ -2,7 +2,7 @@ import { me } from "companion";
 import * as messaging from "messaging";
 import { settingsStorage } from "settings";
 
-import { BartAPI } from "./bart.js"
+import { BVGAPI } from "./bvg.js"
 import { TRAIN_COUNT, FAVORITE_STATION_SETTING } from "../common/globals.js";
 
 settingsStorage.onchange = function(evt) {
@@ -38,14 +38,14 @@ function sendBartSchedule() {
   else {
     station = station[0].value;
   }
-  let bartApi = new BartAPI();
-  bartApi.realTimeDepartures(station.code, station.direction).then(function(departures) {
+  let bvgApi = new BVGAPI();
+    bvgApi.realTimeDepartures(station.code, station.direction).then(function(departures) {
     if (messaging.peerSocket.readyState === messaging.peerSocket.OPEN) {
       // Limit results to the number of tiles available in firmware
       departures.splice(TRAIN_COUNT, departures.length);
       messaging.peerSocket.send(departures);
     }
   }).catch(function (e) {
-    console.log("error"); console.log(e)
+    console.log("error in sendBartSchedule"); console.log(e)
   });
 }
