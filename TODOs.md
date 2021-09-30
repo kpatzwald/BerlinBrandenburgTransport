@@ -6,3 +6,4 @@
 - [ ] Abfahrtzeiten eines Favoriten anzeigen
 
 - [ ] Icon für die App (Rechte für BVG- oder VBB-Logo klären)
+- [ ] Name für die App (BVG? VBB? Rechte?)
