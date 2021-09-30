@@ -39,13 +39,13 @@ function sendBartSchedule() {
     station = station[0].value;
   }
   let bvgApi = new BVGAPI();
-    bvgApi.realTimeDepartures(station.code, station.direction).then(function(departures) {
+  bvgApi.realTimeDepartures(station.code, station.direction).then(function(departures) {
     if (messaging.peerSocket.readyState === messaging.peerSocket.OPEN) {
       // Limit results to the number of tiles available in firmware
       departures.splice(TRAIN_COUNT, departures.length);
       messaging.peerSocket.send(departures);
     }
   }).catch(function (e) {
-    console.log("error in sendBartSchedule"); console.log(e)
+    console.log("Error in index.js->sendBartSchedule()"); console.log(e)
   });
 }
