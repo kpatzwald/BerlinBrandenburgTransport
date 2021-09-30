@@ -1,0 +1,9 @@
+//TODO
+msgid "loading"
+msgstr "Loading departures ..."
+
+msgid "error"
+msgstr "Something terrible happened."
+
+msgid "disconnected"
+msgstr "Please check connection to phone and Fitbit App"

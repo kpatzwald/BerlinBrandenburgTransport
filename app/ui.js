@@ -1,8 +1,9 @@
 import { TRAIN_COUNT, STATIONS } from "../common/globals.js";
 import document from "document";
+import { gettext } from "i18n";
 
 export function BVGUI() {
-  // TODO Funktioniert nicht mehr: Es werden zu viele Tiles generiert, nicht in Abhängigkeit der Suche
+  // TODO Funktioniert nicht: Es werden zu viele Tiles generiert, nicht in Abhängigkeit der Suche
   this.trainList = document.getElementById("trainList");
   this.statusText = document.getElementById("status");
 
@@ -26,18 +27,22 @@ BVGUI.prototype.updateUI = function(state, departures) {
     this.trainList.style.display = "none";
 
     if (state === "loading") {
-      this.statusText.text = "Loading departures ...";
+      this.statusText.text = gettext("loading");
     }
     else if (state === "disconnected") {
-      this.statusText.text = "Please check connection to phone and Fitbit App"
+      this.statusText.text = gettext("disconnected");
     }
     else if (state === "error") {
-      this.statusText.text = "Something terrible happened.";
+      this.statusText.text = gettext("error");
     }
   }
 }
 
 BVGUI.prototype.updateDepartureList = function(departures) {
+
+  let station = document.getElementById("station");
+  station.text = departures[0].station;
+
   for (let i = 0; i < departures.length; i++) {
     let tile = this.tiles[i];
     if (!tile) {
@@ -45,6 +50,7 @@ BVGUI.prototype.updateDepartureList = function(departures) {
     }
 
     const train = departures[i];
+  
     if (!train) {
       tile.style.display = "none";
       continue;
@@ -56,7 +62,7 @@ BVGUI.prototype.updateDepartureList = function(departures) {
     //   tile.getElementById("name").text = STATIONS[train.line];
     // }
     // else {
-    tile.getElementById("name").text = train.name;
+    tile.getElementById("name").text = train.name + "-->" + train.direction;
     //}
     tile.getElementById("when").text = train.when;
     tile.getElementById("delay").text = train.delay;

@@ -1,0 +1,8 @@
+msgid "loading"
+msgstr "Lade Abfahrtzeiten ..."
+
+msgid "error"
+msgstr "Irgendetwas ist schiefgelaufen."
+
+msgid "disconnected"
+msgstr "Überprüfe die Verbindung zwischen Handy und der Fitbit-App"
