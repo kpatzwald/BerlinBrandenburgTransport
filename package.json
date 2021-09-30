@@ -10,7 +10,7 @@
   "fitbit": {
     "appUUID": "bfff60a7-ca74-4da9-bc6e-0f9dab9558e6",
     "appType": "app",
-    "appDisplayName": "BVG",
+    "appDisplayName": "BerlinBrandenburgTransport",
     "iconFile": "resources/icon.png",
     "wipeColor": "#ffffff",
     "requestedPermissions": [
@@ -24,16 +24,16 @@
     ],
     "i18n": {
       "en": {
-        "name": "BVG"
+        "name": "BerlinBrandenburgTransport"
       },
       "de": {
-        "name": "BVG"
+        "name": "BerlinBrandenburgTransport"
       },
       "es": {
-        "name": "BVG"
+        "name": "BerlinBrandenburgTransport"
       },
       "fr": {
-        "name": "BVG"
+        "name": "BerlinBrandenburgTransport"
       }
     },
     "defaultLanguage": "en-US"
