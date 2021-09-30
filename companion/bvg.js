@@ -32,17 +32,21 @@ BVGAPI.prototype.realTimeDepartures = function(origin, direction) {
     fetch(url).then(function(response) {
       return response.json();
     }).then(function(json) {
-      console.log("Got JSON response from server:" + JSON.stringify(json));
+      //console.log("Got JSON response from server:" + JSON.stringify(json));
 
       let data = json;
       
       let departures = [];
 
+      // TODO Station muss nicht für alle Einträge mitgeliefert werden. Spart evtl. Speicherplatz
+
       json.forEach( (trip) => {
         let d = {
           "name": trip["line"]["name"],
           "when": trip["when"],
-          "delay": trip["delay"]
+          "delay": trip["delay"],
+          "direction": trip["direction"],
+          "station": trip["stop"]["name"]
         }
         departures.push(d);
 
@@ -65,6 +69,7 @@ BVGAPI.prototype.realTimeDepartures = function(origin, direction) {
 
       resolve(departures);
     }).catch(function (error) {
+      console.log("Error in bvg.js->realTimeDepartures()"); console.log(error)
       reject(error);
     });
   });

@@ -20,7 +20,7 @@ textarea {
 .item-footer     { x: 0; y: 0; width: 100%; height: 20; }
 
 .tile-divider-bottom {
-  fill: grey;
+  fill: white;
 }
 
 .status {
