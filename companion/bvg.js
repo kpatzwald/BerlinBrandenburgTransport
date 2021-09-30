@@ -22,9 +22,11 @@ BVGAPI.prototype.realTimeDepartures = function(origin, direction) {
     url += "&orig=" + origin;*/
 
     let url = "https://v5.bvg.transport.rest/stops/";
-    url += 900000080202 + "/departures?duration=1"; //ID ist vom U Grenzallee
+//    url += 900000080202 + "/departures?duration=1"; //ID ist vom U Grenzallee
+    url += 900100003 + "/departures?duration=1"; //ID ist vom U Grenzallee
+
     url += "&when=" + "now"; // actual time
-    url += "&results=1"; // only the first result
+    //url += "&results=1"; // only the first result
     //console.log("URL: " + url);
     
     fetch(url).then(function(response) {
@@ -32,11 +34,19 @@ BVGAPI.prototype.realTimeDepartures = function(origin, direction) {
     }).then(function(json) {
       console.log("Got JSON response from server:" + JSON.stringify(json));
 
-      /*let data = json["root"]["station"][0];
+      let data = json;
+      
       let departures = [];
 
-      data["etd"].forEach( (destination) => {
-        destination["estimate"].forEach( (train) => {
+      json.forEach( (trip) => {
+        let d = {
+          "name": trip["line"]["name"],
+          "when": trip["when"],
+          "delay": trip["delay"]
+        }
+        departures.push(d);
+
+        /*trip["estimate"].forEach( (train) => {
           let d = {
             "to": destination["abbreviation"],
             "minutes": Number.parseInt(train["minutes"]),
@@ -47,13 +57,13 @@ BVGAPI.prototype.realTimeDepartures = function(origin, direction) {
             d["minutes"] = 0;
           }
           departures.push(d);
-        });
+        });*/
       });
 
-      // Sort departures
-      departures.sort( (a,b) => { return (a["minutes"] - b["minutes"]) } );
+      // Sort departures (TODO)
+      //departures.sort( (a,b) => { return (a["minutes"] - b["minutes"]) } );
 
-      resolve(departures);*/
+      resolve(departures);
     }).catch(function (error) {
       reject(error);
     });

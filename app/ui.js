@@ -1,7 +1,8 @@
 import { TRAIN_COUNT, STATIONS } from "../common/globals.js";
 import document from "document";
 
-export function BartUI() {
+export function BVGUI() {
+  // TODO Funktioniert nicht mehr: Es werden zu viele Tiles generiert, nicht in Abhängigkeit der Suche
   this.trainList = document.getElementById("trainList");
   this.statusText = document.getElementById("status");
 
@@ -14,7 +15,7 @@ export function BartUI() {
   }
 }
 
-BartUI.prototype.updateUI = function(state, departures) {
+BVGUI.prototype.updateUI = function(state, departures) {
   if (state === "loaded") {
     this.trainList.style.display = "inline";
     this.statusText.text = "";
@@ -36,8 +37,8 @@ BartUI.prototype.updateUI = function(state, departures) {
   }
 }
 
-BartUI.prototype.updateDepartureList = function(departures) {
-  for (let i = 0; i < TRAIN_COUNT; i++) {
+BVGUI.prototype.updateDepartureList = function(departures) {
+  for (let i = 0; i < departures.length; i++) {
     let tile = this.tiles[i];
     if (!tile) {
       continue;
@@ -50,15 +51,16 @@ BartUI.prototype.updateDepartureList = function(departures) {
     }
 
     tile.style.display = "inline";
-    train.to = train.to.toLowerCase();
-    if (train.to in STATIONS) {
-      tile.getElementById("destination").text = STATIONS[train.to];
-    }
-    else {
-      tile.getElementById("destination").text = train.to;
-    }
-    tile.getElementById("platform").text = train.platform;
-    tile.getElementById("minutes").text = train.minutes + " minutes";
-    tile.getElementById("bike").image = train.bike ? "bike.png" : "nobike.png";
+    //train.line = train.line.toLowerCase();
+    // if (train.name in STATIONS) {
+    //   tile.getElementById("name").text = STATIONS[train.line];
+    // }
+    // else {
+    tile.getElementById("name").text = train.name;
+    //}
+    tile.getElementById("when").text = train.when;
+    tile.getElementById("delay").text = train.delay;
+    //tile.getElementById("minutes").text = train.minutes + " minutes";
+    //tile.getElementById("bike").image = train.bike ? "bike.png" : "nobike.png";
   }
 }
