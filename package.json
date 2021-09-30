@@ -22,7 +22,20 @@
       "gemini",
       "mira"
     ],
-    "i18n": {},
+    "i18n": {
+      "en": {
+        "name": "BVG"
+      },
+      "de": {
+        "name": "BVG"
+      },
+      "es": {
+        "name": "BVG"
+      },
+      "fr": {
+        "name": "BVG"
+      }
+    },
     "defaultLanguage": "en-US"
   },
   "scripts": {
