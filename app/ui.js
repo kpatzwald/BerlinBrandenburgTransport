@@ -64,8 +64,10 @@ BVGUI.prototype.updateDepartureList = function(departures) {
     // else {
     tile.getElementById("name").text = train.name + "-->" + train.direction;
     //}
-    tile.getElementById("when").text = train.when;
-    tile.getElementById("delay").text = train.delay;
+    let depTime = new Date(train.when);
+    //date.parse(train.when)
+    tile.getElementById("when").text = depTime.getHours() + ":" + depTime.getMinutes();
+    tile.getElementById("delay").text = "Delay: " + train.delay + "s"; //TODO i18n
     //tile.getElementById("minutes").text = train.minutes + " minutes";
     //tile.getElementById("bike").image = train.bike ? "bike.png" : "nobike.png";
   }
