@@ -13,7 +13,7 @@ export function BVGAPI() {
   
 };
 
-BVGAPI.prototype.realTimeDepartures = function(origin, direction) {
+BVGAPI.prototype.realTimeDepartures = function(station_id) {
   let self = this;
   return new Promise(function(resolve, reject) {
     /*let url = "https://api.bart.gov/api/etd.aspx?json=y";
@@ -23,7 +23,8 @@ BVGAPI.prototype.realTimeDepartures = function(origin, direction) {
 
     let url = "https://v5.bvg.transport.rest/stops/";
 //    url += 900000080202 + "/departures?duration=1"; //ID ist vom U Grenzallee
-    url += 900100003 + "/departures?duration=1"; //ID ist vom U Grenzallee
+    // url += 900100003 + "/departures?duration=1"; //ID ist vom U Alexanderplatz
+    url += station_id + "/departures?duration=1";
 
     url += "&when=" + "now"; // actual time
     //url += "&results=1"; // only the first result
