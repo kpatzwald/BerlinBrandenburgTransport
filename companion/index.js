@@ -53,6 +53,6 @@ function sendBBTSchedule() {
       messaging.peerSocket.send(departures);
     }
   }).catch(function (e) {
-    console.log("Error in index.js->sendBartSchedule()"); console.log(e)
+    console.log("Error in index.js->sendBartSchedule(): " + e);
   });
 }
