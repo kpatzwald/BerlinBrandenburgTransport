@@ -5,7 +5,11 @@
 - [ ] Favoriten in den Einstellungen festlegen
 - [ ] Abfahrtzeiten eines Favoriten anzeigen
 - [ ] weitere Infos per Click anzeigen
+- [ ] Azeige der letzten Aktualisierung
 
 - [ ] Icon für die App (Rechte für BVG- oder VBB-Logo klären)
 - [ ] Name für die App (BVG? VBB? Rechte?)
 - [ ] README für GitHub
+- [ ] README auf Englisch
+- [ ] Lizenz festlegen
+- [ ] weitere Sprachen
