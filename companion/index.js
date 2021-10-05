@@ -23,11 +23,12 @@ messaging.peerSocket.onmessage = function(evt) {
 
 function sendBBTSchedule() {
   let station = settingsStorage.getItem(FAVORITE_STATION_SETTING);
-  console.log("Station: " + station);
+  let station_id;
+  //console.log("Station: " + station);
   if (station) {
     try {
       station = JSON.parse(station);
-      console.log("Station 1: " + station[0].name);
+      console.log("Station 1: " + station[0].name + " ID: " + station[0].id);
       //console.log("Station 2: " + station[1].name);
       console.log("sendBBTSchedule(): parseSettings: " + station);
     }
@@ -41,11 +42,11 @@ function sendBBTSchedule() {
     console.log("sendBBTSchedule(): Loading default value");
   }
   else {
-    station = station[0].name;
+    station_id = station[0].id;
     //console.log("Test");
   }
   let bvgApi = new BVGAPI();
-  bvgApi.realTimeDepartures(station).then(function(departures) {
+  bvgApi.realTimeDepartures(station_id).then(function(departures) {
     if (messaging.peerSocket.readyState === messaging.peerSocket.OPEN) {
       // Limit results to the number of tiles available in firmware
       departures.splice(TRAIN_COUNT, departures.length);
