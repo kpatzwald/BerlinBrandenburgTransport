@@ -5,7 +5,13 @@ Dafür wird auf die API der BVG bzw. des VBB zurückgegriffen.
 Diese App ist in erster Linie eine Übungs-App und befindet sich aktuell in einem sehr frühen Entwicklungsstatium.
 Die App basiert auf der Beispiel-App aus dem SDK: https://github.com/Fitbit/sdk-bart
 
+## Geplante Funktionen
+- Haltestellen in der Nähe anzeigen
+- Abfahrtzeiten eine Haltestelle anzeigen
+- Haltestellen als Favoriten festlegen
+
 ## Unterstützte Modelle
 - Versa
 - Versa 2
 - Ionic
+- Versa lite
