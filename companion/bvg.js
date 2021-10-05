@@ -27,7 +27,7 @@ BVGAPI.prototype.realTimeDepartures = function(station_id) {
     url += station_id + "/departures?duration=1";
 
     url += "&when=" + "now"; // actual time
-    //url += "&results=1"; // only the first result
+    url += "&results=4"; // only the first 4 results // TODO eingeschränkt, weil zu viele Ergebnisse
     //console.log("URL: " + url);
     
     fetch(url).then(function(response) {
