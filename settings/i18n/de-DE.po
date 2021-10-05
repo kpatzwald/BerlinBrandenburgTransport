@@ -1,0 +1,14 @@
+msgid "fav_station"
+msgstr "Wähle deine Lieblingsstation"
+
+msgid "add_number"
+msgstr "Add a station number"
+
+msgid "station_number"
+msgstr "Station Number"
+
+msgid "insert_number"
+msgstr "Insert Number"
+
+msgid "add_number"
+msgstr "Add Number"

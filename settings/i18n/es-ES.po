@@ -1,0 +1,15 @@
+//TODO
+msgid "fav_station"
+msgstr "Select your favorite stations"
+
+msgid "add_number"
+msgstr "Add a station number"
+
+msgid "station_number"
+msgstr "Station Number"
+
+msgid "insert_number"
+msgstr "Insert Number"
+
+msgid "add_number"
+msgstr "Add Number"
