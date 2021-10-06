@@ -6,17 +6,26 @@
     <rect id="train-background" height="100%" />
 
     <!-- line1: Name of the line -->
-    <text id="name" font-size="30" x="5" y="78" fill="white">Name</text>
+    <!--text id="name" font-size="30" x="5" y="78" fill="white">Name</text-->
 
-    <!-- line 2: Time of arrival -->
-    <text id="when"  x="5"   y="98" font-size="20" fill="white">TIME</text>
+    <!-- TODO masquee fertigestellen -->
+    <use id="name" href="#marquee-text" font-size="30" x="5" y="15" width="100%" fill="white" mode="0" value="50">
+      <!--rect width="100%"  fill="red" opacity="0.2"/-->
+      <set href="group/text" attributeName="text-buffer" to="Name" />
+      <set href="group/separator" attributeName="width" to="150" />
+      <!--set href="group/separator" attributeName="height" to="100%" /-->
+      <!--set href="group/text" attributeName="y" to="25" /-->
+    </use>
+
+    <!-- line 2: Departure -->
+    <text id="when"  x="5"   y="106" font-size="20" fill="white">TIME</text>
 
     <!-- TODO X ausgeblendet -->
     <!--text id="platform" x="100%-120" y="78" font-size="30" fill="grey">X</text-->
 
     <!-- line 3: Delay-->
     <!-- TODO Time in minutes (actual: seconds)-->
-    <text id="delay" x="5" y="126" font-size="20" fill="white">Delay in seconds</text>
+    <text id="delay" x="5" y="132" font-size="20" fill="white">Delay in seconds</text>
 
 <!-- TODO Bild aktuell ausgeblendet, könnte aber später das Verkehrsmittel anzeigen -->
     <!--use id="bike" href="#static-image" x="100%-84" y="37" height="47"
@@ -34,10 +43,10 @@
   <!-- FIXME Liste dynamisch generieren -->
   <use id="trainList" href="#tile-list" height="100%" width="100%">
     <var id="reorder-enabled" value="0"/>
-    <var id="separator-height-bottom" value="2"/>
+    <var id="separator-height-bottom" value="2"/> <!-- TODO Was macht dieser Code? -->
 
     <use href="#tile-list-header" class="item-header" id="header-station">
-      <text id="station" x="5" y="40" font-size="30" fill="fb-cyan">Station</text>
+      <text id="station" x="50%" y="40" font-size="30" fill="fb-cyan" text-anchor="middle">Station</text>
       <rect class="line" />
     </use>
 
