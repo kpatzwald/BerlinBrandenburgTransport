@@ -45,7 +45,8 @@ function searchID(searchString) {
     });
 }
 
-searchID('Alexanderplatz');
+// Only for debugging
+//searchID('Alexanderplatz');
 
 /* Define the settings page */
 function mySettings(props) {
@@ -56,7 +57,7 @@ function mySettings(props) {
         <AdditiveList
           title={gettext("fav_station")}
           settingsKey="favorite_station_setting"
-          maxItems="5"
+          maxItems="1"
           addAction={
             <TextInput
               title={gettext("add_number")}
