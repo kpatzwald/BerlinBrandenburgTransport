@@ -6,3 +6,10 @@ msgstr "Irgendetwas ist schiefgelaufen."
 
 msgid "disconnected"
 msgstr "Überprüfe die Verbindung zwischen Handy und der Fitbit-App"
+
+msgid "delay"
+msgstr "Verspätung"
+
+
+msgid "no_delay"
+msgstr "Keine Verspätung"

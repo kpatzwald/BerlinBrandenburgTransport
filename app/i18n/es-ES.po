@@ -7,3 +7,9 @@ msgstr "Something terrible happened."
 
 msgid "disconnected"
 msgstr "Please check connection to phone and Fitbit App"
+
+msgid "delay"
+msgstr "Delay"
+
+msgid "no_delay"
+msgstr "No delay"

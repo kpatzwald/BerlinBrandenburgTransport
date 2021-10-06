@@ -6,10 +6,10 @@ msgid "add_number"
 msgstr "Add a station number"
 
 msgid "station_number"
-msgstr "Station Number"
+msgstr "Add favorite"
 
 msgid "insert_number"
-msgstr "Insert Number"
+msgstr "Search for a station"
 
-msgid "add_number"
-msgstr "Add Number"
+msgid "add_number_action"
+msgstr "Add favorite"
