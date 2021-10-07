@@ -8,7 +8,6 @@
     <!-- line1: Name of the line -->
     <!--text id="name" font-size="30" x="5" y="78" fill="white">Name</text-->
 
-    <!-- TODO masquee fertigestellen -->
     <use id="name" href="#marquee-text" font-size="30" x="5" y="15" width="100%" fill="white" mode="0" value="50">
       <!--rect width="100%"  fill="red" opacity="0.2"/-->
       <set href="group/text" attributeName="text-buffer" to="Name" />
@@ -20,7 +19,7 @@
     <!-- line 2: Departure -->
     <text id="when"  x="5"   y="106" font-size="20" fill="white">TIME</text>
 
-    <!-- TODO X ausgeblendet -->
+    <!-- X ausgeblendet (nicht mehr benötigt) -->
     <!--text id="platform" x="100%-120" y="78" font-size="30" fill="grey">X</text-->
 
     <!-- line 3: Delay-->
