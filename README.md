@@ -15,3 +15,6 @@ Die App basiert auf der Beispiel-App aus dem SDK: https://github.com/Fitbit/sdk-
 - Versa 2
 - Ionic
 - Versa lite
+
+## Screenshot der aktuellen Version (v0.1.0)
+![Screenshot v0.1.0](Screenshots/BBT_0.1.0.png)
