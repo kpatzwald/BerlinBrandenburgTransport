@@ -64,7 +64,7 @@ BVGUI.prototype.updateDepartureList = function(departures) {
     // else {
     tile.getElementById("name").text = train.name + "-->" + train.direction;
 
-    // Enable scroling of masquee after 2 s
+    // Enable scrolling of masquee after 2 s
     setTimeout(function () {
        tile.getElementById("name").state = "enabled";
        //tile.getElementById("name").y = 25;
@@ -80,5 +80,10 @@ BVGUI.prototype.updateDepartureList = function(departures) {
     }
     //tile.getElementById("minutes").text = train.minutes + " minutes";
     //tile.getElementById("bike").image = train.bike ? "bike.png" : "nobike.png";
+  }
+
+  for (let i = departures.length; i < TRAIN_COUNT; i++) {
+    let tile = this.tiles[i];
+    tile.style.display = "none";
   }
 }
