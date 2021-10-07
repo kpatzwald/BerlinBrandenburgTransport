@@ -28,12 +28,12 @@ BVGUI.prototype.updateUI = function(state, departures) {
 
     if (state === "loading") {
       this.statusText.text = gettext("loading");
-    }
-    else if (state === "disconnected") {
+    } else if (state === "disconnected") {
       this.statusText.text = gettext("disconnected");
-    }
-    else if (state === "error") {
+    } else if (state === "error") {
       this.statusText.text = gettext("error");
+    } else if (state === "error_no_fav_station") {
+      this.statusText.text = gettext("error_no_fav_station");
     }
   }
 }

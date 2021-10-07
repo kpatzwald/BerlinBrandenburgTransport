@@ -21,22 +21,35 @@ let autoValues = [];
 
 /* Search for Station IDs */
 function searchID(searchString) {
-  let url = 'https://v5.bvg.transport.rest/locations?results=5&query=' + encodeURIComponent(searchString);
+  let url = 'https://v5.vbb.transport.rest/locations?results=5&query=' + encodeURIComponent(searchString);
   //console.log('Url: ' + url);
+  //autoValues = []; // Empty array with autoValues TODO funktioniert noch nicht, Ergebnis immer leer
   fetch(url)
     .then(function (response) {
       return response.json();
     })
     .then(function (json) {
       //console.log("index.jsx:searchID(): Got JSON response from server: " + JSON.stringify(json));
+      // TODO Fehlermeldung bei forEach (wahrscheinlich wegen leerem Ergebnis)
+      console.log("index.jsx:searchID(): " + typeof(json));
+      console.log("Inhalt von json: " + json.toString());
+      console.log("Länge von json: " + json.length);
+      if (json && Object.keys(json).length === 0 && Object.getPrototypeOf(obj) === Object.prototype) {
+        console.log("Leeres Ergebnis");
+      }
       //let stations = [];
-      json.forEach((trip) => {
-        let d = {
-          "name": trip["name"],
-          "id": trip["id"]
+      autoValues = [];
+      Object.keys(json).forEach((trip) => {
+        var arr = json[trip];
+        if (!(arr["name"] === undefined)) {
+          console.log("Inhalt von Name: " + arr["name"]);
+          let d = {
+            "name": arr["name"],
+            "id": arr["id"]
+          }
+          //console.log("index.jsx:searchID(): Station: " + d.name);
+          autoValues.push(d);
         }
-        //console.log("index.jsx:searchID(): Station: " + d.name);
-        autoValues.push(d);
       })
       //console.log(autoValues);
     })

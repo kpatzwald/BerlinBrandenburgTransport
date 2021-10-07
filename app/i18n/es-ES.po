@@ -13,3 +13,6 @@ msgstr "Delay"
 
 msgid "no_delay"
 msgstr "No delay"
+
+msgid "error_no_fav_station"
+msgstr "Error: Please create a favorite station first"

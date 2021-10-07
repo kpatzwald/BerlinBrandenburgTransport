@@ -13,3 +13,6 @@ msgstr "Verspätung"
 
 msgid "no_delay"
 msgstr "Keine Verspätung"
+
+msgid "error_no_fav_station"
+msgstr "Fehler: Bitte legen Sie zuerst eine Station in den Einstellungen Ihrer Fitbit-App an."

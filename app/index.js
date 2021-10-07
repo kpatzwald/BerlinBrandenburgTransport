@@ -13,7 +13,12 @@ messaging.peerSocket.onopen = function() {
 
 // Listen for the onmessage event
 messaging.peerSocket.onmessage = function(evt) {
-  ui.updateUI("loaded", evt.data);
+  //console.log("index.js:onmessage: " + typeof(evt.data));
+  if (evt.data == "error_no_fav_station") {
+    ui.updateUI("error_no_fav_station");
+  } else {
+    ui.updateUI("loaded", evt.data);
+  }
 }
 
 // Listen for the onerror event
