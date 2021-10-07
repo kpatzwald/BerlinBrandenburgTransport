@@ -15,12 +15,8 @@ textarea {
 
 
 .item-header     { x: 0; y: 0; width: 100%; height: 25; }
-.item            { x: 0; y: 0; width: 100%; height: 33%; }
-.item-footer     { x: 0; y: 0; width: 100%; height: 20; }
-
-.tile-divider-bottom {
-  fill: white;
-}
+.item            { y: 0; width: 100%; height: 100; }
+/*.item-footer     { x: 0; y: 0; width: 100%; height: 20; }*/
 
 .status {
   text-anchor: middle;
@@ -34,7 +30,9 @@ textarea {
   fill: white;
 }
 
-/* Funktioniert noch nicht */ 
 .line {
-  fill: white;
+  fill: fb-cyan;
+  height: 3;
+  width: 100%;
+  y: 55;
 }

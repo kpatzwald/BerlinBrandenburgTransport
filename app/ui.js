@@ -78,7 +78,7 @@ BVGUI.prototype.updateDepartureList = function(departures) {
     // //}
     let depTime = new Date(train.when);
     //date.parse(train.when)
-    tile.getElementById("when").text = depTime.getHours() + ":" + depTime.getMinutes();
+    tile.getElementById("when").text = depTime.getHours() + ":" + (depTime.getMinutes() < 10 ? '0' : '') + depTime.getMinutes();
     if (train.delay == null) {
       tile.getElementById("delay").text = gettext("delay") + ": " + gettext("no_delay");
     } else {

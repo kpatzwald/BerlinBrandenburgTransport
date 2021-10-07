@@ -17,7 +17,7 @@
     </use>
 
     <!-- line 2: Departure -->
-    <text id="when"  x="5"   y="106" font-size="20" fill="white">TIME</text>
+    <text id="when" x="5" y="106" font-size="20" fill="white">TIME</text>
 
     <!-- X ausgeblendet (nicht mehr benötigt) -->
     <!--text id="platform" x="100%-120" y="78" font-size="30" fill="grey">X</text-->
@@ -32,17 +32,15 @@
       <set href="image" attributeName="href" to="nobike.png"/>
     </use-->
 
-    <!-- FIXME Funktioniert noch nicht. -->
-    <rect id="tile-divider-bottom" height="2" />
+    <rect id="tile-divider-bottom" y="145" height="2" width="100%" fill="fb-cyan" />
   </symbol>
 
   <textarea id="status" class="status">status message to be displayed
   here</textarea>
 
-  <!-- FIXME Liste dynamisch generieren -->
-  <use id="trainList" href="#tile-list" height="100%" width="100%">
+  <use id="trainList" href="#tile-list" height="100%-55" width="100%">
     <var id="reorder-enabled" value="0"/>
-    <var id="separator-height-bottom" value="6"/> <!-- TODO Was macht dieser Code? -->
+    <var id="separator-height-bottom" value="6" /> <!-- TODO Was macht dieser Code? -->
 
     <use href="#tile-list-header" class="item-header" id="header-station">
       <text id="station" x="50%" y="40" font-size="30" fill="fb-cyan" text-anchor="middle">Station</text>
