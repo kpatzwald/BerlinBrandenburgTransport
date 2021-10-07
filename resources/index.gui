@@ -42,7 +42,7 @@
   <!-- FIXME Liste dynamisch generieren -->
   <use id="trainList" href="#tile-list" height="100%" width="100%">
     <var id="reorder-enabled" value="0"/>
-    <var id="separator-height-bottom" value="2"/> <!-- TODO Was macht dieser Code? -->
+    <var id="separator-height-bottom" value="6"/> <!-- TODO Was macht dieser Code? -->
 
     <use href="#tile-list-header" class="item-header" id="header-station">
       <text id="station" x="50%" y="40" font-size="30" fill="fb-cyan" text-anchor="middle">Station</text>

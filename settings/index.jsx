@@ -1,4 +1,3 @@
-//import { STATIONS } from "../common/globals.js"
 import { gettext } from "i18n";
 
 console.log("Opening BBT Settings page");

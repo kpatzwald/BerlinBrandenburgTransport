@@ -1,4 +1,4 @@
-import { TRAIN_COUNT, STATIONS } from "../common/globals.js";
+import { TRAIN_COUNT } from "../common/globals.js";
 import document from "document";
 import { gettext } from "i18n";
 
@@ -41,7 +41,13 @@ BVGUI.prototype.updateUI = function(state, departures) {
 BVGUI.prototype.updateDepartureList = function(departures) {
 
   let station = document.getElementById("station");
-  station.text = departures[0].station;
+  // TODO: Fehler muss noch behoben werden.
+  console.log("departures[0]: " + departures[0]);
+  if (departures[0] === undefined) {
+    console.log("Fehler: Es wurden keine Abfahrtzeiten geladen.");
+    station.text = "Fehler";
+  } else
+    station.text = departures[0].station;
 
   for (let i = 0; i < departures.length; i++) {
     let tile = this.tiles[i];
