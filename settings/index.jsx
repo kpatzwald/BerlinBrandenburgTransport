@@ -3,20 +3,8 @@ import { gettext } from "i18n";
 console.log("Opening BBT Settings page");
 
 let autoValues = [];
-/*for (let key in STATIONS) {
-  autoValues.push( {
-    "name": STATIONS[key] + " Northbound",
-    "value": { code: key, direction: "n" }
-  } );
-  autoValues.push( {
-    "name": STATIONS[key] + " Southbound",
-    "value": { code: key, direction: "s" }
-  } );
-}*/
 
-// TODO Add i18n
 // TODO Eingabe validieren?
-// TODO Settings testen, wenn online
 
 /* Search for Station IDs */
 function searchID(searchString) {
@@ -29,7 +17,6 @@ function searchID(searchString) {
     })
     .then(function (json) {
       //console.log("index.jsx:searchID(): Got JSON response from server: " + JSON.stringify(json));
-      // TODO Fehlermeldung bei forEach (wahrscheinlich wegen leerem Ergebnis)
       console.log("index.jsx:searchID(): " + typeof(json));
       console.log("Inhalt von json: " + json.toString());
       console.log("Länge von json: " + json.length);
