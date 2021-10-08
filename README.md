@@ -6,12 +6,12 @@ Diese App ist in erster Linie eine Übungs-App und befindet sich aktuell in eine
 Die App basiert auf der Beispiel-App aus dem SDK: https://github.com/Fitbit/sdk-bart
 
 ## Geplante Funktionen
-[x] Abfahrtzeiten einer Haltestelle anzeigen
-[x] eine Haltestelle als Favorit festlegen
-[ ] weitere Informationen zu einer Abfahrt anzeigen
-[ ] mehrere Haltestellen als Favoriten festlegen
-[ ] Haltestellen in der Nähe anzeigen
-[ ] wichtige Einstellungen auf der Uhr (Verkehrsmittel, Zeitraum der Abfrage, Anzahl der Ergebnisse etc.)
+- [x] Abfahrtzeiten einer Haltestelle anzeigen
+- [x] eine Haltestelle als Favorit festlegen
+- [ ] weitere Informationen zu einer Abfahrt anzeigen
+- [ ] mehrere Haltestellen als Favoriten festlegen
+- [ ] Haltestellen in der Nähe anzeigen
+- [ ] wichtige Einstellungen auf der Uhr (Verkehrsmittel, Zeitraum der Abfrage, Anzahl der Ergebnisse etc.)
 
 ## Unterstützte Modelle
 - Versa
