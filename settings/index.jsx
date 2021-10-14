@@ -17,18 +17,18 @@ function searchID(searchString) {
     })
     .then(function (json) {
       //console.log("index.jsx:searchID(): Got JSON response from server: " + JSON.stringify(json));
-      console.log("index.jsx:searchID(): " + typeof(json));
-      console.log("Inhalt von json: " + json.toString());
-      console.log("Länge von json: " + json.length);
-      if (json && Object.keys(json).length === 0 && Object.getPrototypeOf(obj) === Object.prototype) {
-        console.log("Leeres Ergebnis");
-      }
+      // console.log("index.jsx:searchID(): " + typeof(json));
+      // console.log("Inhalt von json: " + json.toString());
+      // console.log("Länge von json: " + json.length);
+      // if (json && Object.keys(json).length === 0 && Object.getPrototypeOf(obj) === Object.prototype) {
+      //   console.log("Leeres Ergebnis");
+      // }
       //let stations = [];
       autoValues = [];
       Object.keys(json).forEach((trip) => {
         var arr = json[trip];
         if (!(arr["name"] === undefined)) {
-          console.log("Inhalt von Name: " + arr["name"]);
+          // console.log("Inhalt von Name: " + arr["name"]);
           let d = {
             "name": arr["name"],
             "id": arr["id"]

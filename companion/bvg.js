@@ -14,10 +14,10 @@ BVGAPI.prototype.realTimeDepartures = function(station_id) {
     let url = "https://v5.vbb.transport.rest/stops/";
 //    url += 900000080202 + "/departures?duration=1"; //ID ist vom U Grenzallee
     // url += 900100003 + "/departures?duration=1"; //ID ist vom U Alexanderplatz
-    url += station_id + "/departures?duration=10"; //Show departures for how many minutes?
+    url += station_id + "/departures?duration=30"; //Show departures for how many minutes?
 
     url += "&when=" + "now"; // actual time
-    url += "&results=6"; // only the first 6 results // TODO eingeschränkt, weil zu viele Ergebnisse
+    url += "&results=8"; // only the first 8 results // TODO eingeschränkt, weil zu viele Ergebnisse
     //console.log("URL: " + url);
     
     fetch(url).then(function(response) {
