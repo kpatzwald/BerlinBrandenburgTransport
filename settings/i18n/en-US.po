@@ -1,15 +1,15 @@
 // TODO
 msgid "fav_station"
-msgstr "Select your favorite stations"
+msgstr "Favorite stations"
 
 msgid "add_number"
-msgstr "Add a station number"
+msgstr "Add a favorite station"
 
 msgid "station_number"
-msgstr "Add favorite"
+msgstr "Add favorite station"
 
 msgid "insert_number"
 msgstr "Search for a station"
 
 msgid "add_number_action"
-msgstr "Add favorite"
+msgstr "Add favorite station"

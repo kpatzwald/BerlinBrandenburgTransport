@@ -1,5 +1,5 @@
 {
-  "name": "bvg",
+  "name": "vbb",
   "version": "0.1.1",
   "private": true,
   "license": "UNLICENSED",
@@ -10,7 +10,7 @@
   "fitbit": {
     "appUUID": "bfff60a7-ca74-4da9-bc6e-0f9dab9558e6",
     "appType": "app",
-    "appDisplayName": "BerlinBrandenburgTransport",
+    "appDisplayName": "VBB",
     "iconFile": "resources/icon.png",
     "wipeColor": "#ffffff",
     "requestedPermissions": [
@@ -24,16 +24,16 @@
     ],
     "i18n": {
       "en": {
-        "name": "BerlinBrandenburgTransport"
+        "name": "VBB"
       },
       "de": {
-        "name": "BerlinBrandenburgTransport"
+        "name": "VBB"
       },
       "es": {
-        "name": "BerlinBrandenburgTransport"
+        "name": "VBB"
       },
       "fr": {
-        "name": "BerlinBrandenburgTransport"
+        "name": "VBB"
       }
     },
     "defaultLanguage": "en-US"

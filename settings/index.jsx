@@ -10,7 +10,6 @@ let autoValues = [];
 async function searchID(searchString) {
   let url = 'https://v5.vbb.transport.rest/locations?results=5&query=' + encodeURIComponent(searchString);
   //console.log('Url: ' + url);
-  //autoValues = []; // Empty array with autoValues TODO funktioniert noch nicht, Ergebnis immer leer
   await fetch(url)
     .then(function (response) {
       return response.json();
@@ -48,12 +47,14 @@ async function searchID(searchString) {
 // Only for debugging
 //searchID('Alexanderplatz');
 
+// TODO Adress formatting
+
 /* Define the settings page */
 function mySettings(props) {
   return (
     <Page>
       <Section
-        title={<Text bold align="center">BerlinBrandenburgTransport</Text>}>
+        title={<Text bold align="center">{gettext("fav_station")}</Text>}>
         <AdditiveList
           title={gettext("fav_station")}
           settingsKey="favorite_station_setting"
@@ -73,7 +74,11 @@ function mySettings(props) {
             />
           }
         />
+        <Text>Das Logo wird mit freundlicher Genehmigung des <Link source="https://www.vbb.de">Verkehrsverbunds Berlin-Brandenburg</Link> verwendet.</Text>
+        <Text>VBB Verkehrsverbund Berlin-Brandenburg GmbH, Stralauer Platz 29, 10243 Berlin</Text>
+
       </Section>
+      
     </Page>
   );
 }

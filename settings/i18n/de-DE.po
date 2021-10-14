@@ -1,14 +1,14 @@
 msgid "fav_station"
-msgstr "Wähle deine Lieblingsstation"
+msgstr "Lieblingsstationen"
 
 msgid "add_number"
 msgstr "Add a station number"
 
 msgid "station_number"
-msgstr "Favorit hinzufügen"
+msgstr "Lieblingsstation hinzufügen"
 
 msgid "insert_number"
 msgstr "Nach einer Station suchen"
 
 msgid "add_number"
-msgstr "Favorit hinzufügen"
+msgstr "Lieblingsstation hinzufügen"
