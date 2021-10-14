@@ -7,11 +7,11 @@ let autoValues = [];
 // TODO Eingabe validieren?
 
 /* Search for Station IDs */
-function searchID(searchString) {
+async function searchID(searchString) {
   let url = 'https://v5.vbb.transport.rest/locations?results=5&query=' + encodeURIComponent(searchString);
   //console.log('Url: ' + url);
   //autoValues = []; // Empty array with autoValues TODO funktioniert noch nicht, Ergebnis immer leer
-  fetch(url)
+  await fetch(url)
     .then(function (response) {
       return response.json();
     })
@@ -25,10 +25,11 @@ function searchID(searchString) {
       // }
       //let stations = [];
       autoValues = [];
+      //console.log("Anzahl Ergebnisse: " + json.length);
       Object.keys(json).forEach((trip) => {
         var arr = json[trip];
         if (!(arr["name"] === undefined)) {
-          // console.log("Inhalt von Name: " + arr["name"]);
+          //console.log("Inhalt von Name: " + arr["name"]);
           let d = {
             "name": arr["name"],
             "id": arr["id"]
@@ -63,8 +64,8 @@ function mySettings(props) {
               label={gettext("station_number")}
               placeholder={gettext("insert_number")}
               action={gettext("add_number_action")}
-              onAutocomplete={(value) => {
-                searchID(value);
+              onAutocomplete={async (value) => {
+                await searchID(value);
                 //console.log("Value: " + value);
                 return autoValues.filter((option) =>
                   option.name.toLowerCase().includes(value.toLowerCase()));

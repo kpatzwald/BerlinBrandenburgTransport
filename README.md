@@ -26,5 +26,8 @@ Die App basiert auf der Beispiel-App aus dem SDK: https://github.com/Fitbit/sdk-
 - eine Haltestelle kann als Favorit festgelegt werden
 - die sechs nächsten Abfahrtzeiten in den nächsten 10 Minuten werden angezeigt
 
+### v0.1.1
+- korrekte Anzeige der Suchvorschläge in den Einstellungen
+
 #### Screenshot der aktuellen Version (v0.1.0)
 ![Screenshot v0.1.0](Screenshots/BBT_0.1.0.png)
