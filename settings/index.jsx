@@ -4,8 +4,6 @@ console.log("Opening BBT Settings page");
 
 let autoValues = [];
 
-// TODO Eingabe validieren?
-
 /* Search for Station IDs */
 async function searchID(searchString) {
   let url = 'https://v5.vbb.transport.rest/locations?results=5&query=' + encodeURIComponent(searchString);
@@ -48,6 +46,7 @@ async function searchID(searchString) {
 //searchID('Alexanderplatz');
 
 // TODO Adress formatting
+// TODO i18n
 
 /* Define the settings page */
 function mySettings(props) {
