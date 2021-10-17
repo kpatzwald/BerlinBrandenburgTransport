@@ -22,15 +22,19 @@ Die App basiert auf der Beispiel-App aus dem SDK: https://github.com/Fitbit/sdk-
 - (Sense in Planung)
 
 ## Aktueller Stand
-### v0.1.0
-- eine Haltestelle kann als Favorit festgelegt werden
-- die sechs nächsten Abfahrtzeiten in den nächsten 10 Minuten werden angezeigt
+### v0.1.2
+- verschiedene technisches Umstellungen (virtuelle Tile-Liste, Panorama-View) für weitere Features
+
+#### Screenshot der aktuellen Version (v0.1.2)
+![Screenshot v0.1.2](Screenshots/BBT_0.1.2.png)
+![Screenshot Settings v0.1.2](Screenshots/BBT_0.1.2_settings.png)
 
 ### v0.1.1
 - korrekte Anzeige der Suchvorschläge in den Einstellungen
 
-### v0.1.2
-- verschiedene technisches Umstellungen (virtuelle Tile-Liste, Panorama-View) für weitere Features
+### v0.1.0
+- eine Haltestelle kann als Favorit festgelegt werden
+- die sechs nächsten Abfahrtzeiten in den nächsten 10 Minuten werden angezeigt
 
 #### Screenshot der aktuellen Version (v0.1.0)
 ![Screenshot v0.1.0](Screenshots/BBT_0.1.0.png)
