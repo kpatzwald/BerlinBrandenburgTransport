@@ -8,5 +8,8 @@
     <link rel="import" href="/mnt/sysassets/widgets/tile_list_widget.gui"/>
 
     <link rel="import" href="/mnt/sysassets/widgets/marquee_text_widget.gui" />
+
+    <link rel="import" href="/mnt/sysassets/widgets/panoramaview_widget.gui" />
+    <link rel="import" href="/mnt/sysassets/widgets/pagination_dots.gui" />
   </defs>
 </svg>
