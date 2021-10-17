@@ -28,9 +28,9 @@ function sendBBTSchedule() {
   if (station) {
     try {
       station = JSON.parse(station);
-      console.log("Station 1: " + station[0].name + " ID: " + station[0].id);
+      //console.log("Station 1: " + station[0].name + " ID: " + station[0].id);
       //console.log("Station 2: " + station[1].name);
-      console.log("index.js:sendBBTSchedule(): parseSettings: " + station);
+      //console.log("index.js:sendBBTSchedule(): parseSettings: " + station);
     }
     catch (e) {
       console.log("index.js:sendBBTSchedule(): Error parsing setting value: " + e);

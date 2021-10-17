@@ -4,7 +4,7 @@ export function BVGAPI() {
 
 BVGAPI.prototype.realTimeDepartures = function(station_id) {
   let self = this;
-  console.log("Station ID: " + station_id);
+  //console.log("Station ID: " + station_id);
   return new Promise(function(resolve, reject) {
     /*let url = "https://api.bart.gov/api/etd.aspx?json=y";
     url += "&key=" + self.apiKey;
@@ -35,7 +35,7 @@ BVGAPI.prototype.realTimeDepartures = function(station_id) {
       //   console.log("bvg.js:realTimeDepartures(): No results!")
       // } else {
 
-      console.log("Objekt-Typ: " + json.length);
+      //console.log("Objekt-Typ: " + json.length);
 
       json.forEach( (trip) => {
         let d = {
