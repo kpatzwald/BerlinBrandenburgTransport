@@ -2,103 +2,112 @@
 <svg>
   <!-- Define a reusable tile to display a train -->
   <symbol id="tile-train" focusable="false" pointer-events="visible" system-events="all">
-    <rect id="train-background" height="100%" />
+    <!--rect id="train-background" height="100%" /-->
 
-    <use id="name" href="#marquee-text" font-size="30" x="5" y="15" width="100%" fill="white" mode="0" value="50">
+    <use id="name" href="#marquee-text" font-size="30" x="5" y="-30" width="100%" fill="white" mode="0" value="50">
       <!--rect width="100%"  fill="red" opacity="0.2"/-->
       <set href="group/text" attributeName="text-buffer" to="Name" />
-      <set href="group/separator" attributeName="width" to="150" />
+      <set href="group/separator" attributeName="width" to="100" />
       <!--set href="group/separator" attributeName="height" to="100%" /-->
       <!--set href="group/text" attributeName="y" to="25" /-->
     </use>
 
     <!-- line 2: Departure -->
-    <text id="when" x="5" y="106" font-size="20" fill="white">TIME</text>
+    <text id="when" x="5" y="55" font-size="20" fill="white">TIME</text>
 
     <!-- line 3: Delay-->
     <!-- TODO Time in minutes (actual: seconds)-->
-    <text id="delay" x="5" y="132" font-size="20" fill="white">Delay in seconds</text>
+    <text id="delay" x="5" y="80" font-size="20" fill="white">Delay in seconds</text>
 
-<!-- Bild aktuell ausgeblendet, könnte aber später das Verkehrsmittel anzeigen -->
+    <!-- Bild aktuell ausgeblendet, könnte aber später das Verkehrsmittel anzeigen -->
     <!--use id="bike" href="#static-image" x="100%-84" y="37" height="47"
     width="80">
       <set href="image" attributeName="href" to="nobike.png"/>
     </use-->
 
-    <rect id="tile-divider-bottom" y="145" height="2" width="100%" fill="fb-cyan" />
+    <rect id="tile-divider-bottom" y="95" height="2" width="100%" fill="fb-cyan" />
+    <rect id="touch-me" pointer-events="all" x="0" y="0" width="100%" height="100%-2" opacity="0" />
   </symbol>
 
-  <textarea id="status" class="status">status message to be displayed
-  here</textarea>
+  <textarea id="status" class="status">status message to be displayed here</textarea>
 
-  <use id="trainList" href="#tile-list" height="100%-55" width="100%">
-    <var id="reorder-enabled" value="0"/>
-    <!--var id="separator-height-bottom" value="6" /--> <!-- Was macht dieser Code? -->
+  <use id="container" href="#panoramaview">
+    <use id="item1" href="#panoramaview-item">
+      <!--text id="station" class="item-header">Station</text-->
 
-    <use href="#tile-list-header" class="item-header" id="header-station">
-      <text id="station" x="50%" y="40" font-size="30" fill="fb-cyan" text-anchor="middle">Station</text>
-      <rect class="line" />
+      <use id="trainList" href="#tile-list" height="100%" width="100%">
+        <var id="virtual" value="1" />
+        <var id="reorder-enabled" value="0" />
+        <var id="separator-height-bottom" value="2" /> <!-- What does this code do? -->
+
+        <!--use href="#tile-list-header" class="item-header" id="header-station">
+          <text id="station">Station</text>
+          <rect class="line" />
+        </use-->
+
+        <use href="#tile-list-pool" id="header-pool">
+          <use id="header-pool[0]" href="#tile-list-item" class="tile-list-header" height="60">
+            <text id="station" text-anchor="middle" x="50%">Station</text>
+            <rect id="tile-divider-bottom" y="55" height="3" width="100%" fill="fb-cyan" />
+            <!-- TODO Touch-Event: Infos for station-->
+          </use>
+        </use>
+
+        <use href="#tile-list-pool" id="my-pool">
+          <use id="my-pool[0]" href="#tile-list-item" class="tile-list-item">
+            <use href="#tile-train" />
+          </use>
+          <use id="my-pool[1]" href="#tile-list-item" class="tile-list-item">
+            <use href="#tile-train" />
+          </use>
+          <use id="my-pool[2]" href="#tile-list-item" class="tile-list-item">
+            <use href="#tile-train" />
+          </use>
+          <use id="my-pool[3]" href="#tile-list-item" class="tile-list-item">
+            <use href="#tile-train" />
+          </use>
+          <use id="my-pool[4]" href="#tile-list-item" class="tile-list-item">
+            <use href="#tile-train" />
+          </use>
+          <use id="my-pool[5]" href="#tile-list-item" class="tile-list-item">
+            <use href="#tile-train" />
+          </use>
+          <use id="my-pool[6]" href="#tile-list-item" class="tile-list-item">
+            <use href="#tile-train" />
+          </use>
+          <use id="my-pool[7]" href="#tile-list-item" class="tile-list-item">
+            <use href="#tile-train" />
+          </use>
+          <use id="my-pool[8]" href="#tile-list-item" class="tile-list-item">
+            <use href="#tile-train" />
+          </use>
+          <use id="my-pool[9]" href="#tile-list-item" class="tile-list-item">
+            <use href="#tile-train" />
+          </use>
+        </use>
+      </use>
+    </use>
+    <use id="item2" href="#panoramaview-item">
+      <rect width="100%" height="100%" fill="green" />
+    </use>
+    <use id="item3" href="#panoramaview-item">
+      <rect width="100%" height="100%" fill="blue" />
+    </use>
+    <use id="item4" href="#panoramaview-item">
+      <rect width="100%" height="100%" fill="yellow" />
+    </use>
+    <use id="item5" href="#panoramaview-item">
+      <rect width="100%" height="100%" fill="orange" />
     </use>
 
-    <use id="train-0" href="#tile-list-item" class="item">
-      <use href="#tile-train" />
-    </use>
-    <use id="train-1" href="#tile-list-item" class="item">
-      <use href="#tile-train" />
-    </use>
-    <use id="train-2" href="#tile-list-item" class="item">
-      <use href="#tile-train" />
-    </use>
-    <use id="train-3" href="#tile-list-item" class="item">
-      <use href="#tile-train" />
-    </use>
-    <use id="train-4" href="#tile-list-item" class="item">
-      <use href="#tile-train" />
-    </use>
-    <use id="train-5" href="#tile-list-item" class="item">
-      <use href="#tile-train" />
-    </use>
-    <use id="train-6" href="#tile-list-item" class="item">
-      <use href="#tile-train" />
-    </use>
-    <use id="train-7" href="#tile-list-item" class="item">
-      <use href="#tile-train" />
-    </use>
-    <use id="train-8" href="#tile-list-item" class="item">
-      <use href="#tile-train" />
-    </use>
-    <use id="train-9" href="#tile-list-item" class="item">
-      <use href="#tile-train" />
-    </use>
-    <use id="train-10" href="#tile-list-item" class="item">
-      <use href="#tile-train" />
-    </use>
-    <use id="train-11" href="#tile-list-item" class="item">
-      <use href="#tile-train" />
-    </use>
-    <use id="train-12" href="#tile-list-item" class="item">
-      <use href="#tile-train" />
-    </use>
-    <use id="train-13" href="#tile-list-item" class="item">
-      <use href="#tile-train" />
-    </use>
-    <use id="train-14" href="#tile-list-item" class="item">
-      <use href="#tile-train" />
-    </use>
-    <use id="train-15" href="#tile-list-item" class="item">
-      <use href="#tile-train" />
-    </use>
-    <use id="train-16" href="#tile-list-item" class="item">
-      <use href="#tile-train" />
-    </use>
-    <use id="train-17" href="#tile-list-item" class="item">
-      <use href="#tile-train" />
-    </use>
-    <use id="train-18" href="#tile-list-item" class="item">
-      <use href="#tile-train" />
-    </use>
-    <use id="train-19" href="#tile-list-item" class="item">
-      <use href="#tile-train" />
+    <!-- Have enough pagination dots for your slides (extras are hidden) -->
+    <use id="pagination-dots" href="#pagination-widget" y="8" fill="white">
+      <use href="#pagination-dot" />
+      <use href="#pagination-dot" />
+      <use href="#pagination-dot" />
+      <use href="#pagination-dot" />
+      <use href="#pagination-dot" />
+      <use href="#pagination-highlight-dot" />
     </use>
   </use>
 </svg>

@@ -1,9 +1,10 @@
-text     {
+text {
   font-size: 32;
   font-family: System-Regular;
   font-weight: regular;
   text-length: 32;
 }
+
 /*
 textarea {
   font-size: 32;
@@ -13,9 +14,22 @@ textarea {
   text-length: 1024;
 }*/
 
+.tile-list-header {
+  width: 100%;
+  y: 15;
+  x: 0;
+  font-size: 30;
+  fill: fb-cyan;
+  text-anchor: middle; 
+  display: none;
+}
 
-.item-header     { x: 0; y: 0; width: 100%; height: 25; }
-.item            { y: 0; width: 100%; height: 100; }
+.tile-list-item {
+  y: 0;
+  width: 100%;
+  height: 100;
+  display: "none";
+}
 /*.item-footer     { x: 0; y: 0; width: 100%; height: 20; }*/
 
 .status {
@@ -28,11 +42,4 @@ textarea {
   text-length: 512;
   font-size: 32;
   fill: white;
-}
-
-.line {
-  fill: fb-cyan;
-  height: 3;
-  width: 100%;
-  y: 55;
 }
