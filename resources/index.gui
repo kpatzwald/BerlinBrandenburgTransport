@@ -1,12 +1,8 @@
 <!-- Übernommen aus SDK-BART -->
 <svg>
   <!-- Define a reusable tile to display a train -->
-  <symbol id="tile-train" focusable="false" pointer-events="visible"
-  system-events="all">
+  <symbol id="tile-train" focusable="false" pointer-events="visible" system-events="all">
     <rect id="train-background" height="100%" />
-
-    <!-- line1: Name of the line -->
-    <!--text id="name" font-size="30" x="5" y="78" fill="white">Name</text-->
 
     <use id="name" href="#marquee-text" font-size="30" x="5" y="15" width="100%" fill="white" mode="0" value="50">
       <!--rect width="100%"  fill="red" opacity="0.2"/-->
@@ -19,14 +15,11 @@
     <!-- line 2: Departure -->
     <text id="when" x="5" y="106" font-size="20" fill="white">TIME</text>
 
-    <!-- X ausgeblendet (nicht mehr benötigt) -->
-    <!--text id="platform" x="100%-120" y="78" font-size="30" fill="grey">X</text-->
-
     <!-- line 3: Delay-->
     <!-- TODO Time in minutes (actual: seconds)-->
     <text id="delay" x="5" y="132" font-size="20" fill="white">Delay in seconds</text>
 
-<!-- TODO Bild aktuell ausgeblendet, könnte aber später das Verkehrsmittel anzeigen -->
+<!-- Bild aktuell ausgeblendet, könnte aber später das Verkehrsmittel anzeigen -->
     <!--use id="bike" href="#static-image" x="100%-84" y="37" height="47"
     width="80">
       <set href="image" attributeName="href" to="nobike.png"/>
@@ -40,7 +33,7 @@
 
   <use id="trainList" href="#tile-list" height="100%-55" width="100%">
     <var id="reorder-enabled" value="0"/>
-    <var id="separator-height-bottom" value="6" /> <!-- TODO Was macht dieser Code? -->
+    <!--var id="separator-height-bottom" value="6" /--> <!-- Was macht dieser Code? -->
 
     <use href="#tile-list-header" class="item-header" id="header-station">
       <text id="station" x="50%" y="40" font-size="30" fill="fb-cyan" text-anchor="middle">Station</text>
