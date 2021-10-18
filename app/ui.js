@@ -1,18 +1,9 @@
-import { TRAIN_COUNT } from "../common/globals.js";
 import document from "document";
 import { gettext } from "i18n";
 
 export function VBBUI() {
   this.trainList = document.getElementById("trainList");
   this.statusText = document.getElementById("status");
-
-  // this.tiles = [];
-  // for (let i = 0; i < NUM_ELEMS; i++) {
-  //   let tile = document.getElementById(`my-pool[${i}]`);
-  //   if (tile) {
-  //     this.tiles.push(tile);
-  //   }
-  // }
 }
 
 VBBUI.prototype.updateUI = function (state, departures) {
@@ -43,18 +34,9 @@ VBBUI.prototype.updateUI = function (state, departures) {
  * Updates the DepartureList when new data is available 
  */
 VBBUI.prototype.updateDepartureList = function (departures) {
-
-  // let station = document.getElementById("station");
-  // if (departures[0] === undefined) {
-  //   console.log("Error: No departures found.");
-  //   station.text = "Error";
-  // } else {
-  //   station.text = departures[0].station;
-  //   station.style.display = "inline";
-  // }
-  console.log(departures);
-  departures.unshift(departures[0].station);
-  console.log(departures);
+  //console.log(departures);
+  departures.unshift(departures[0].station); // Adds the actual station as first element to the departures-array
+  //console.log(departures);
 
   this.trainList.delegate = {
     getTileInfo: function (index) {
@@ -99,57 +81,4 @@ VBBUI.prototype.updateDepartureList = function (departures) {
 
   this.trainList.length = departures.length;
 
-  //let station = document.getElementById("station");
-
-  // TODO: Error, when no favorite station is set 
-  //console.log("departures[0]: " + departures[0]);
-  // if (departures[0] === undefined) {
-  //   console.log("Fehler: Es wurden keine Abfahrtzeiten geladen.");
-  //   station.text = "Fehler";
-  // } else {
-  //   this.trainList.length = departures.length;
-  //   station.text = departures[0].station;
-  // }
-
-  // for (let i = 0; i < departures.length; i++) {
-  //   let tile = document.getElementById(`my-pool[${i}]`);
-  //   if (!tile) {
-  //     continue;
-  //   }
-
-  //   const train = departures[i];
-
-  //   if (!train) {
-  //     tile.style.display = "none";
-  //     continue;
-  //   }
-
-  //   tile.style.display = "inline";
-  //   tile.getElementById("name").text = train.name + "-->" + train.direction;
-  //   // let test = [{type: "my-pool", value: train.name + "-->" + train.direction, index: i}];
-  //   // this.trainList.configureTile(tile, test);
-
-  //   // Enable scrolling of masquee after 2 s
-  //   setTimeout(function () {
-  //      tile.getElementById("name").state = "enabled";
-  //      //tile.getElementById("name").y = 25;
-  //   }, 2000);
-
-  //   let depTime = new Date(train.when);
-
-  //   tile.getElementById("when").text = depTime.getHours() + ":" + (depTime.getMinutes() < 10 ? '0' : '') + depTime.getMinutes();
-  //   if (train.delay == null) {
-  //     tile.getElementById("delay").text = gettext("delay") + ": " + gettext("no_delay");
-  //   } else {
-  //     tile.getElementById("delay").text = gettext("delay") + ": " + train.delay + " s";
-  //   }
-  //   //tile.getElementById("minutes").text = train.minutes + " minutes";
-  //   //tile.getElementById("bike").image = train.bike ? "bike.png" : "nobike.png";
-  // }
-
-  // Removes all not used tiles
-  // for (let i = departures.length; i < TRAIN_COUNT; i++) {
-  //   let tile = this.tiles[i];
-  //   tile.style.display = "none";
-  // }
 }
