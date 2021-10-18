@@ -1,8 +1,8 @@
-export function BVGAPI() {
+export function VBBAPI() {
   
 };
 
-BVGAPI.prototype.realTimeDepartures = function(station_id) {
+VBBAPI.prototype.realTimeDepartures = function(station_id) {
   let self = this;
   //console.log("Station ID: " + station_id);
   return new Promise(function(resolve, reject) {
@@ -32,7 +32,7 @@ BVGAPI.prototype.realTimeDepartures = function(station_id) {
       // TODO Station muss nicht für alle Einträge mitgeliefert werden. Spart evtl. Speicherplatz
 
       // if (typeof(json) == "object") {
-      //   console.log("bvg.js:realTimeDepartures(): No results!")
+      //   console.log("vbb.js:realTimeDepartures(): No results!")
       // } else {
 
       //console.log("Objekt-Typ: " + json.length);
@@ -54,7 +54,7 @@ BVGAPI.prototype.realTimeDepartures = function(station_id) {
 
       resolve(departures);
     }).catch(function (error) {
-      console.log("Error in bvg.js->realTimeDepartures(): " + error);
+      console.log("Error in vbb.js->realTimeDepartures(): " + error);
       reject(error);
     });
   });

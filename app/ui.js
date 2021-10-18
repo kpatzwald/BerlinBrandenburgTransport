@@ -2,7 +2,7 @@ import { TRAIN_COUNT } from "../common/globals.js";
 import document from "document";
 import { gettext } from "i18n";
 
-export function BVGUI() {
+export function VBBUI() {
   this.trainList = document.getElementById("trainList");
   this.statusText = document.getElementById("status");
 
@@ -15,7 +15,7 @@ export function BVGUI() {
   // }
 }
 
-BVGUI.prototype.updateUI = function (state, departures) {
+VBBUI.prototype.updateUI = function (state, departures) {
   if (state === "loaded") {
     this.trainList.style.display = "inline";
     this.statusText.text = "";
@@ -42,7 +42,7 @@ BVGUI.prototype.updateUI = function (state, departures) {
 /** 
  * Updates the DepartureList when new data is available 
  */
-BVGUI.prototype.updateDepartureList = function (departures) {
+VBBUI.prototype.updateDepartureList = function (departures) {
 
   // let station = document.getElementById("station");
   // if (departures[0] === undefined) {

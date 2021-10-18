@@ -2,7 +2,7 @@ import { me } from "companion";
 import * as messaging from "messaging";
 import { settingsStorage } from "settings";
 
-import { BVGAPI } from "./bvg.js"
+import { VBBAPI } from "./vbb.js"
 import { TRAIN_COUNT, FAVORITE_STATION_SETTING } from "../common/globals.js";
 
 settingsStorage.onchange = function (evt) {
@@ -46,8 +46,8 @@ function sendBBTSchedule() {
   } else {
     station_id = station[0].id;
     //console.log("Test");
-    let bvgApi = new BVGAPI();
-    bvgApi.realTimeDepartures(station_id).then(function (departures) {
+    let vbbAPI = new VBBAPI();
+    vbbAPI.realTimeDepartures(station_id).then(function (departures) {
       if (messaging.peerSocket.readyState === messaging.peerSocket.OPEN) {
         // Limit results to the number of tiles available in firmware
         departures.splice(TRAIN_COUNT, departures.length);

@@ -10,9 +10,9 @@
 - [ ] Aktualisierungs-Button
 - [ ] bisher keine Ausgabe für Brandenburg
 
-- [ ] Icon für die App (Rechte für BVG- oder VBB-Logo klären)
-- [ ] Name für die App (BVG? VBB? Rechte?)
-- [ ] README für GitHub
+- [x] Icon für die App (Rechte für BVG- oder VBB-Logo klären)
+- [x] Name für die App (BVG? VBB? Rechte?)
+- [x] README für GitHub
 - [ ] README auf Englisch
 - [ ] Lizenz festlegen
 - [ ] weitere Sprachen

@@ -1,7 +1,7 @@
 import * as messaging from "messaging";
-import { BVGUI } from "./ui.js";
+import { VBBUI } from "./ui.js";
 
-let ui = new BVGUI();
+let ui = new VBBUI();
 
 ui.updateUI("disconnected");
 
