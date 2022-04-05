@@ -4,6 +4,7 @@ Diese [Fitbit](https://www.fitbit.com)-App soll einmal die Abfahrtzeiten bestimm
 Dafür wird auf die API des [VBB](https://www.vbb.de) zurückgegriffen.
 Diese App ist in erster Linie eine Übungs-App und befindet sich aktuell in einem sehr frühen Entwicklungsstatium.
 Die App basiert auf der Beispiel-App aus dem SDK: https://github.com/Fitbit/sdk-bart
+**Die App wird mangels Fitbit nicht mehr weiterentwickelt.**
 
 ## Geplante Funktionen
 - [x] Abfahrtzeiten einer Haltestelle anzeigen
